@@ -1,0 +1,7 @@
+{
+  "name": "ionic_boilerplate",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
