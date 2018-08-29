@@ -19,7 +19,7 @@ export class MyApp {
     private _tokenService: Angular2TokenService
   ) {
     this._tokenService.init({
-      apiBase: 'https://d-pressed.herokuapp.com/api/v1'
+      apiBase: 'https://dpressed.herokuapp.com/api/v1'
     });
     
     platform.ready().then(() => {
