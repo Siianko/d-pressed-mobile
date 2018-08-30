@@ -10,5 +10,12 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let article of articles">
+      <strong>{{ article.title }}</strong>
+      {{ article.image }}
+      <br>
+      {{ article.content }}
+    </ion-item>
+  </ion-list>
 </ion-content>
