@@ -63,7 +63,7 @@ describe('AppComponent', () => {
   it('signOut method', inject([Angular2TokenService, MockBackend], (tokenService, mockBackend) => {
     mockBackend.connections.subscribe(
       c => {
-        expect(c.request.method).toEqual(RequestMethod.Post);
+        expect(c.request.method).toEqual(RequestMethod.Delete);
         expect(c.request.url).toEqual('https://dpressed.herokuapp.com/api/auth/sign_out');
       }
     );
