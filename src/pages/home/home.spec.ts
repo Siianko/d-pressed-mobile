@@ -21,4 +21,4 @@ describe("HomePage", () => {
         { provide: NavController, useFactory: () => NavControllerMock.instance() }
       ]
     }).compileComponents();
-  }));
+  }))});
