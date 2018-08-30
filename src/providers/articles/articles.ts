@@ -1,18 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Angular2TokenService } from 'angular2-token';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ArticlesProvider {
-  constructor(private _tokenService: Angular2TokenService) {}
+  apiUrl:string;
+
+  constructor(public http: HttpClient) {
+    this.apiUrl = "https://dpressed.herokuapp.com/api"
+  }
 
   saveData(data) {
     return this._tokenService.post('performance_data', data).map(data => data);
   }
 
   getArticles() {
-    return this._tokenService
-      .get('articles')
-      .map(articles => articles.json());
+    return this.http.get(this.apiUrl)
   }
 }
