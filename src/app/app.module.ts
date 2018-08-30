@@ -8,7 +8,6 @@ import { Angular2TokenService } from 'angular2-token';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
