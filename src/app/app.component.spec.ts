@@ -54,7 +54,7 @@ describe('AppComponent', () => {
       c => {
         expect(c.request.getBody()).toEqual(JSON.stringify(signInData));
         expect(c.request.method).toEqual(RequestMethod.Post);
-        expect(c.request.url).toEqual('http://dpressed.herokuapp.com/api/auth/sign_in');
+        expect(c.request.url).toEqual('https://dpressed.herokuapp.com/api/auth/sign_in');
       }
     );
     component.login(signInData)
@@ -63,9 +63,8 @@ describe('AppComponent', () => {
   it('signOut method', inject([Angular2TokenService, MockBackend], (tokenService, mockBackend) => {
     mockBackend.connections.subscribe(
       c => {
-        expect(c.request.getBody()).toEqual(JSON.stringify(signInData));
         expect(c.request.method).toEqual(RequestMethod.Post);
-        expect(c.request.url).toEqual('http://dpressed.herokuapp.com/api/auth/sign_out');
+        expect(c.request.url).toEqual('https://dpressed.herokuapp.com/api/auth/sign_out');
       }
     );
     
