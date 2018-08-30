@@ -67,7 +67,6 @@ describe('AppComponent', () => {
         expect(c.request.url).toEqual('https://dpressed.herokuapp.com/api/auth/sign_out');
       }
     );
-    
     component.logout();
   }));      
 });
