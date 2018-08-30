@@ -7,7 +7,7 @@ import { ArticlesProvider } from '../../providers/articles/articles'
   templateUrl: 'home.html'
 })
 export class HomePage {
-  
+  article:Text;
 
   constructor(public navCtrl: NavController,
               private articlesProvider: ArticlesProvider) {
