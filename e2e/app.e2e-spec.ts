@@ -1,4 +1,5 @@
 import { Page } from "./app.po";
+import { Testability } from "@angular/core";
 
 describe("App", () => {
   let page: Page;
@@ -12,10 +13,15 @@ describe("App", () => {
       page.navigateTo("/");
     });
 
-    it("should have a title saying Ionic Boilerplate", () => {
+    it("should have a title saying D-pressed", () => {
       page.getTitle().then(title => {
-        expect(title).toEqual("Ionic Boilerplate");
+        expect(title).toEqual("D-pressed");
       });
+    });
+
+    it("fill in form", () => {
+      page.fillInForm('pablo@test.com', 'my-password');
+      expect(page.results_card_content()).toContain('Signed in successfully');
     });
   });
 });
